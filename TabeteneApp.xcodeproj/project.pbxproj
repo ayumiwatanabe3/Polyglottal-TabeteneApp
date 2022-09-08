@@ -11,6 +11,10 @@
 		3FAA4A9C28CA1404004CE938 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA4A9B28CA1404004CE938 /* ContentView.swift */; };
 		3FAA4A9E28CA1405004CE938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA4A9D28CA1405004CE938 /* Assets.xcassets */; };
 		3FAA4AA128CA1405004CE938 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA4AA028CA1405004CE938 /* Preview Assets.xcassets */; };
+		3FAA4AA828CA1577004CE938 /* FoodsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA4AA728CA1577004CE938 /* FoodsData.swift */; };
+		3FAA4AAA28CA162A004CE938 /* FoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA4AA928CA162A004CE938 /* FoodList.swift */; };
+		3FAA4AAC28CA165D004CE938 /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA4AAB28CA165D004CE938 /* FoodRow.swift */; };
+		3FAA4AAE28CA168F004CE938 /* PostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA4AAD28CA168F004CE938 /* PostRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		3FAA4A9B28CA1404004CE938 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3FAA4A9D28CA1405004CE938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FAA4AA028CA1405004CE938 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3FAA4AA728CA1577004CE938 /* FoodsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsData.swift; sourceTree = "<group>"; };
+		3FAA4AA928CA162A004CE938 /* FoodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodList.swift; sourceTree = "<group>"; };
+		3FAA4AAB28CA165D004CE938 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
+		3FAA4AAD28CA168F004CE938 /* PostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequest.swift; sourceTree = "<group>"; };
+		3FAA4AAF28CA16C8004CE938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,13 @@
 		3FAA4A9828CA1404004CE938 /* TabeteneApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FAA4AAF28CA16C8004CE938 /* Info.plist */,
 				3FAA4A9928CA1404004CE938 /* TabeteneAppApp.swift */,
+				3FAA4AA728CA1577004CE938 /* FoodsData.swift */,
 				3FAA4A9B28CA1404004CE938 /* ContentView.swift */,
+				3FAA4AA928CA162A004CE938 /* FoodList.swift */,
+				3FAA4AAB28CA165D004CE938 /* FoodRow.swift */,
+				3FAA4AAD28CA168F004CE938 /* PostRequest.swift */,
 				3FAA4A9D28CA1405004CE938 /* Assets.xcassets */,
 				3FAA4A9F28CA1405004CE938 /* Preview Content */,
 			);
@@ -138,7 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FAA4A9C28CA1404004CE938 /* ContentView.swift in Sources */,
+				3FAA4AAE28CA168F004CE938 /* PostRequest.swift in Sources */,
+				3FAA4AAA28CA162A004CE938 /* FoodList.swift in Sources */,
 				3FAA4A9A28CA1404004CE938 /* TabeteneAppApp.swift in Sources */,
+				3FAA4AAC28CA165D004CE938 /* FoodRow.swift in Sources */,
+				3FAA4AA828CA1577004CE938 /* FoodsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +287,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TabeteneApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TabeteneApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,6 +316,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TabeteneApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TabeteneApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
