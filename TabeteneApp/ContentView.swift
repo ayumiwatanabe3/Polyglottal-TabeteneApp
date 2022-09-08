@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var foods : [Food]
     @State var showingPopUp = false
+    @State var reload :Int = 0
     
     var body: some View {
         ZStack {
@@ -24,7 +25,10 @@ struct ContentView: View {
                     Spacer()
                     Button(action: {
                         print("Button")
-                        showingPopUp = true
+                        if showingPopUp {
+                            showingPopUp = false
+                        }else{
+                            showingPopUp = true}
                     }) {
                         Text("＋")
                             .bold()
@@ -38,6 +42,11 @@ struct ContentView: View {
                 FoodList(foods: foods)
                 Spacer()
                 Button("更新") {
+                    print("更新ボタンを押したよ")
+                    reload = reload+1
+                    print(reload)
+                    print(foods)
+                    showingPopUp = false
                 }
                 .padding()
             }
@@ -56,6 +65,7 @@ struct PopupView: View {
     @State var foodName : String = ""
     @State var cooking_by : String = ""
     @State var amount : String = ""
+    @State var cooking_date : String = ""
 
     var body: some View {
         VStack(alignment: .center){
@@ -80,7 +90,7 @@ struct PopupView: View {
                 isPresent = false
             }.onChange(of: amount, perform: { newValue in
                 print("料理名：\(foodName)、誰が：\(cooking_by)、量：\(amount)")
-                PostRequest()
+                PostRequest( name: foodName, amount: amount, cooking_date: cooking_date, cooking_by:cooking_by)
 //                foods = Foods().foods
             })
             .padding()

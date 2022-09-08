@@ -57,11 +57,16 @@ class Foods: ObservableObject {
             if let data = data{
                 do{
                     let tasks = try decoder.decode(Response.self, from: data)
-                    tasks.list.forEach{ i in
-                        print(i.name)
-                    }
+//                    tasks.list.forEach{ i in
+//                        print(i.name)
+//                    }
+                    print(tasks.list)
                     DispatchQueue.main.async {
-                               self.foods = tasks.list
+//                        self.foods = tasks.list
+                        for food in tasks.list{
+                            self.foods.append(food)
+                            print(self.foods)
+                        }
                            }
                 }catch{
                     print(error)

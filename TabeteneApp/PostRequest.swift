@@ -14,8 +14,9 @@ struct Insert:Codable {
     var cooking_by:String
 }
 
-func PostRequest() {
-    let insertData = Insert(name: "ペペロン", amount: "1",cooking_date: "2022-09-08",cooking_by: "sae")
+func PostRequest(name : String, amount : String, cooking_date : String, cooking_by : String)  {
+    
+    let insertData = Insert(name: name, amount: amount ,cooking_date: cooking_date, cooking_by: cooking_by)
     
     guard let url = URL(string: "https://soloproject2nd.herokuapp.com/api/foods") else {
            print("POST API URL エラー!!")
