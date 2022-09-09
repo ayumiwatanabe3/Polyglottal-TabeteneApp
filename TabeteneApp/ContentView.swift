@@ -48,20 +48,24 @@ struct ContentView: View {
                     print(reload)
                     print(foodsclass.foods)
                     showingPopUp = false
+                    foodsclass.callAPI()
                 }
                 .padding()
             }
             .padding()
             
             if showingPopUp {
-                PopupView(isPresent: $showingPopUp)
+                PopupView(isPresent: $showingPopUp,reload:$reload)
             }
         }
     }
 }
 
 struct PopupView: View {
+    @EnvironmentObject var foodsclass: Foods
+
     @Binding var isPresent : Bool
+    @Binding var reload : Int
     @State var foodName : String = ""
     @State var cooking_by : String = ""
     @State var amount : String = ""
@@ -88,6 +92,10 @@ struct PopupView: View {
             }
             Button("登録"){
                 isPresent = false
+                reload = reload+1
+                print(reload)
+                foodsclass.callAPI()
+
 //                cooking_date = Date()
             }.onChange(of: amount, perform: { newValue in
                 print("料理名：\(foodName)、誰が：\(cooking_by)、量：\(amount)")

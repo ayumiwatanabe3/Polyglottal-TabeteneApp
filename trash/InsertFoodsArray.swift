@@ -17,8 +17,8 @@ import SwiftUI
 
 func InsertFoodsArray(name : String, amount : String, cooking_date : String, cooking_by : String)  {
 //    @ObservedObject  var foodsData = Foods()
-////    var foodsArray : [Food] = Foods().foods
-//    
+//    var foodsArray : [Food] = Foods().foods
+//
 //    let food:Insert = Insert(name: name, amount: amount ,cooking_date: cooking_date, cooking_by: cooking_by)
 //
 //    foodsData.foods = foodsData.foods.append(food)

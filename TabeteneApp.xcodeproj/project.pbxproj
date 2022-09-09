@@ -43,9 +43,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F98364F28CAE057008819BF /* trash */ = {
+			isa = PBXGroup;
+			children = (
+				3F98364D28CA3FB6008819BF /* InsertFoodsArray.swift */,
+			);
+			path = trash;
+			sourceTree = "<group>";
+		};
 		3FAA4A8D28CA1404004CE938 = {
 			isa = PBXGroup;
 			children = (
+				3F98364F28CAE057008819BF /* trash */,
 				3FAA4A9828CA1404004CE938 /* TabeteneApp */,
 				3FAA4A9728CA1404004CE938 /* Products */,
 			);
@@ -65,7 +74,6 @@
 				3FAA4AAF28CA16C8004CE938 /* Info.plist */,
 				3FAA4A9928CA1404004CE938 /* TabeteneAppApp.swift */,
 				3FAA4AA728CA1577004CE938 /* FoodsData.swift */,
-				3F98364D28CA3FB6008819BF /* InsertFoodsArray.swift */,
 				3FAA4A9B28CA1404004CE938 /* ContentView.swift */,
 				3FAA4AA928CA162A004CE938 /* FoodList.swift */,
 				3FAA4AAB28CA165D004CE938 /* FoodRow.swift */,
