@@ -11,7 +11,8 @@ struct ContentView: View {
     @EnvironmentObject var foodsclass: Foods
 
     @State var showingPopUp = false
-    @State var deleteList: [Food] = []
+    @State var showingDeleteButton = false
+    @State var deleteId: Int = 0
 
     var body: some View {
         ZStack {
@@ -26,10 +27,7 @@ struct ContentView: View {
                     Spacer()
                     Button(action: {
                         print("Button")
-                        if showingPopUp {
-                            showingPopUp = false
-                        }else{
-                            showingPopUp = true}
+                        showingPopUp.toggle()
                     }) {
                         Text("＋")
                             .bold()
@@ -40,13 +38,13 @@ struct ContentView: View {
                     }
                     .padding()
                 }
-                FoodList(foods: foodsclass.foods)
+                FoodList(foods: foodsclass.foods,showingDeleteButton: $showingDeleteButton,deleteId: $deleteId)
                 Spacer()
-                if !showingPopUp {
-                    Button("削除") {
+                if showingDeleteButton {
+                    Button("削除します") {
                         print("削除ボタンを押したよ")
-                        deleteRequest(deleteList: [24])
-                        showingPopUp = false
+                        deleteRequest(deleteList: [deleteId])
+                        showingDeleteButton.toggle()
                         foodsclass.callAPI()
                     }
                     .padding()
