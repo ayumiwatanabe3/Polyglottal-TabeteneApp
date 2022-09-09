@@ -22,17 +22,6 @@ struct FoodList: View {
                         showingDeleteButton.toggle()
                     }
             }
-            
-//            if showingDeleteButton {
-//                DeleteButton(showingDeleteButton:$showingDeleteButton, deleteId:deleteId)
-//            }
-            
         }
     }
 }
-
-//struct FoodList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FoodList(foods: Foods().foods,showingDeleteButton: ,deleteId:)
-//    }
-//}

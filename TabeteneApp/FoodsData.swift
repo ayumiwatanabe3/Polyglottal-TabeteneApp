@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-//struct Food:Identifiable {
-//    var id = UUID()
-//    var state_delete: Bool = false
-//    var name: String = ""
-//    var amount: String = ""
-//    var cooking_date:String = ""
-//    var cooking_by:String = ""
-//}
 struct Response:Codable{
     var list:[Food]
 }

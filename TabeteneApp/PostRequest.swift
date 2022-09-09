@@ -19,7 +19,7 @@ func PostRequest(name : String, amount : String, cooking_date : String, cooking_
     let insertData = Insert(name: name, amount: amount ,cooking_date: cooking_date, cooking_by: cooking_by)
     
     guard let url = URL(string: "https://soloproject2nd.herokuapp.com/api/foods") else {
-           print("POST API URL エラー!!")
+           print("POST URL error")
         return
     }
     
@@ -35,7 +35,7 @@ func PostRequest(name : String, amount : String, cooking_date : String, cooking_
     
     let task = URLSession.shared.dataTask(with: request) { data, response, error in
       if error != nil {
-        print("エラー")
+        print("POST error")
         return
       }
       print("POST成功")

@@ -10,7 +10,7 @@ import Foundation
 func deleteRequest (deleteList: [Int]){
     
     guard let url = URL(string: "https://soloproject2nd.herokuapp.com/api/foods") else {
-           print("POST API URL エラー!!")
+           print("DELETE URL error")
         return
     }
     
@@ -27,7 +27,7 @@ func deleteRequest (deleteList: [Int]){
     
     let task = URLSession.shared.dataTask(with: request) { data, response, error in
       if error != nil {
-        print("エラー")
+        print("DELETE error")
         return
       }
       print("DELETE成功")

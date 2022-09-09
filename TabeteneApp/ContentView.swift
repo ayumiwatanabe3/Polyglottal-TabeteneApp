@@ -90,12 +90,10 @@ struct PopupView: View {
             Button("登録"){
                 isPresent = false
                 foodsclass.callAPI()
-
 //                cooking_date = Date()
             }.onChange(of: amount, perform: { newValue in
                 print("料理名：\(foodName)、誰が：\(cooking_by)、量：\(amount)")
                 PostRequest( name: foodName, amount: amount, cooking_date: cooking_date, cooking_by:cooking_by)
-//                InsertFoodsArray(name: foodName, amount: amount, cooking_date: cooking_date, cooking_by: cooking_by)
             })
             .padding()
         }
