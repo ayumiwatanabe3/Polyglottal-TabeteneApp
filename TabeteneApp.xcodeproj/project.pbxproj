@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3F98364E28CA3FB6008819BF /* InsertFoodsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F98364D28CA3FB6008819BF /* InsertFoodsArray.swift */; };
 		3F98365128CAE391008819BF /* DeleteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F98365028CAE391008819BF /* DeleteRequest.swift */; };
-		3F98365328CAEA47008819BF /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F98365228CAEA47008819BF /* DeleteButton.swift */; };
 		3FAA4A9A28CA1404004CE938 /* TabeteneAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA4A9928CA1404004CE938 /* TabeteneAppApp.swift */; };
 		3FAA4A9C28CA1404004CE938 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAA4A9B28CA1404004CE938 /* ContentView.swift */; };
 		3FAA4A9E28CA1405004CE938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FAA4A9D28CA1405004CE938 /* Assets.xcassets */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		3F98364D28CA3FB6008819BF /* InsertFoodsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertFoodsArray.swift; sourceTree = "<group>"; };
 		3F98365028CAE391008819BF /* DeleteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteRequest.swift; sourceTree = "<group>"; };
-		3F98365228CAEA47008819BF /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		3FAA4A9628CA1404004CE938 /* TabeteneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabeteneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAA4A9928CA1404004CE938 /* TabeteneAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabeteneAppApp.swift; sourceTree = "<group>"; };
 		3FAA4A9B28CA1404004CE938 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 				3F98365028CAE391008819BF /* DeleteRequest.swift */,
 				3FAA4A9B28CA1404004CE938 /* ContentView.swift */,
 				3FAA4AA928CA162A004CE938 /* FoodList.swift */,
-				3F98365228CAEA47008819BF /* DeleteButton.swift */,
 				3FAA4AAB28CA165D004CE938 /* FoodRow.swift */,
 				3FAA4AAD28CA168F004CE938 /* PostRequest.swift */,
 				3FAA4A9D28CA1405004CE938 /* Assets.xcassets */,
@@ -173,7 +170,6 @@
 				3F98365128CAE391008819BF /* DeleteRequest.swift in Sources */,
 				3FAA4AAA28CA162A004CE938 /* FoodList.swift in Sources */,
 				3FAA4A9A28CA1404004CE938 /* TabeteneAppApp.swift in Sources */,
-				3F98365328CAEA47008819BF /* DeleteButton.swift in Sources */,
 				3F98364E28CA3FB6008819BF /* InsertFoodsArray.swift in Sources */,
 				3FAA4AAC28CA165D004CE938 /* FoodRow.swift in Sources */,
 				3FAA4AA828CA1577004CE938 /* FoodsData.swift in Sources */,
