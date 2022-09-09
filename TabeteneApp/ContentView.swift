@@ -11,8 +11,8 @@ struct ContentView: View {
     @EnvironmentObject var foodsclass: Foods
 
     @State var showingPopUp = false
-    @State var reload :Int = 0
-    
+    @State var deleteList: [Food] = []
+
     var body: some View {
         ZStack {
             VStack {
@@ -42,20 +42,20 @@ struct ContentView: View {
                 }
                 FoodList(foods: foodsclass.foods)
                 Spacer()
-                Button("更新") {
-                    print("更新ボタンを押したよ")
-                    reload = reload+1
-                    print(reload)
-                    print(foodsclass.foods)
-                    showingPopUp = false
-                    foodsclass.callAPI()
+                if !showingPopUp {
+                    Button("削除") {
+                        print("削除ボタンを押したよ")
+                        deleteRequest(deleteList: [24])
+                        showingPopUp = false
+                        foodsclass.callAPI()
+                    }
+                    .padding()
                 }
-                .padding()
             }
             .padding()
             
             if showingPopUp {
-                PopupView(isPresent: $showingPopUp,reload:$reload)
+                PopupView(isPresent: $showingPopUp)
             }
         }
     }
@@ -65,7 +65,6 @@ struct PopupView: View {
     @EnvironmentObject var foodsclass: Foods
 
     @Binding var isPresent : Bool
-    @Binding var reload : Int
     @State var foodName : String = ""
     @State var cooking_by : String = ""
     @State var amount : String = ""
@@ -92,8 +91,6 @@ struct PopupView: View {
             }
             Button("登録"){
                 isPresent = false
-                reload = reload+1
-                print(reload)
                 foodsclass.callAPI()
 
 //                cooking_date = Date()
