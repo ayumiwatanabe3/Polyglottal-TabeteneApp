@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var foods : [Food]
+    @EnvironmentObject var foodsclass: Foods
+
     @State var showingPopUp = false
     @State var reload :Int = 0
     
@@ -39,13 +40,13 @@ struct ContentView: View {
                     }
                     .padding()
                 }
-                FoodList(foods: foods)
+                FoodList(foods: foodsclass.foods)
                 Spacer()
                 Button("更新") {
                     print("更新ボタンを押したよ")
                     reload = reload+1
                     print(reload)
-                    print(foods)
+                    print(foodsclass.foods)
                     showingPopUp = false
                 }
                 .padding()
@@ -53,14 +54,13 @@ struct ContentView: View {
             .padding()
             
             if showingPopUp {
-                PopupView(foods: $foods, isPresent: $showingPopUp)
+                PopupView(isPresent: $showingPopUp)
             }
         }
     }
 }
 
 struct PopupView: View {
-    @Binding var foods : [Food]
     @Binding var isPresent : Bool
     @State var foodName : String = ""
     @State var cooking_by : String = ""
@@ -88,10 +88,11 @@ struct PopupView: View {
             }
             Button("登録"){
                 isPresent = false
+//                cooking_date = Date()
             }.onChange(of: amount, perform: { newValue in
                 print("料理名：\(foodName)、誰が：\(cooking_by)、量：\(amount)")
                 PostRequest( name: foodName, amount: amount, cooking_date: cooking_date, cooking_by:cooking_by)
-//                foods = Foods().foods
+//                InsertFoodsArray(name: foodName, amount: amount, cooking_date: cooking_date, cooking_by: cooking_by)
             })
             .padding()
         }
@@ -103,6 +104,6 @@ struct PopupView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(foods: Foods().foods)
+        ContentView()
     }
 }

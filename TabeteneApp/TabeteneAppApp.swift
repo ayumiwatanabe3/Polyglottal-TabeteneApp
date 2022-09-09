@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct TabeteneAppApp: App {
-    @ObservedObject  var foodsData = Foods()
+    @StateObject  var foodsClass = Foods()
 
     var body: some Scene {
         WindowGroup {
-            ContentView(foods: foodsData.foods)
+            ContentView()
+                .environmentObject(foodsClass)
         }
     }
 }

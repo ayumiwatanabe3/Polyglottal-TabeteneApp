@@ -29,9 +29,9 @@ struct Food:Codable,Identifiable {
 }
 
 
-
-
 class Foods: ObservableObject {
+    @State var refresh:Int = 0
+    
     @Published var foods: [Food] = [
 //        Food(id:1,state_delete: false, name: "カレー", amount: "1",cooking_date: "2022-08-25",cooking_by: "haha"),
 //        Food(id:2,state_delete: false, name: "サラダ", amount: "2",cooking_date: "2022-08-26",cooking_by: "daddy"),
@@ -57,17 +57,13 @@ class Foods: ObservableObject {
             if let data = data{
                 do{
                     let tasks = try decoder.decode(Response.self, from: data)
-//                    tasks.list.forEach{ i in
-//                        print(i.name)
-//                    }
-                    print(tasks.list)
+                    tasks.list.forEach{ i in
+                        print(i.name)
+                    }
                     DispatchQueue.main.async {
-//                        self.foods = tasks.list
-                        for food in tasks.list{
-                            self.foods.append(food)
-                            print(self.foods)
-                        }
-                           }
+                        self.foods = tasks.list
+                        print("foodリストを更新したよ")
+                    }
                 }catch{
                     print(error)
                 }
